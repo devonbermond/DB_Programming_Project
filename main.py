@@ -6,7 +6,7 @@ def connect_db():
     connection = mysql.connector.connect(user='devonb58',
                                    password='233481209',
                                    host='10.8.37.226',
-                                   database='db_name')
+                                   database='devonb58_db')
     return connection
 
 
@@ -28,7 +28,7 @@ id_num = input("Enter your student id number:")
 results = get_student_sched(id_num)
 
 for period, course, room, teacher in results:
-  print("Period: " + period)
+  print("Period: " + str(period))
   print("Course: " + course)
   print("Room: " + room)
   print("Teacher: " + teacher
